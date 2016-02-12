@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{AE07B653-501D-70C1-BEC3-E1869D177F44}") = "Experimental character walking", "Assembly-CSharp.csproj", "{003659A2-9504-0977-686E-0CE2BFC3DDD3}"
+EndProject
+Project("{AE07B653-501D-70C1-BEC3-E1869D177F44}") = "Experimental character walking", "Assembly-CSharp-Editor.csproj", "{6D6045BF-C88D-4E23-4F08-30F19C7B8724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{003659A2-9504-0977-686E-0CE2BFC3DDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003659A2-9504-0977-686E-0CE2BFC3DDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003659A2-9504-0977-686E-0CE2BFC3DDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003659A2-9504-0977-686E-0CE2BFC3DDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6045BF-C88D-4E23-4F08-30F19C7B8724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6045BF-C88D-4E23-4F08-30F19C7B8724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6045BF-C88D-4E23-4F08-30F19C7B8724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6045BF-C88D-4E23-4F08-30F19C7B8724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
