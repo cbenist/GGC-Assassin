@@ -10,15 +10,21 @@ public class CharacterMovement : MonoBehaviour {
     bool isJumping = false;
     Vector3 upward = Vector3.zero;
     Vector3 lastForward = Vector3.zero;
+
+    GameObject weapon;
 	// Use this for initialization
 	void Start() {
         cc = GetComponent<CharacterController>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Move();
-        
+
+        if (Input.GetButtonDown("Fire1")) {
+
+        }
 
 	}
 
@@ -36,12 +42,6 @@ public class CharacterMovement : MonoBehaviour {
         {
             upward += Physics.gravity * Time.deltaTime;
         }
-        /*else if (isJumping)
-        {
-            lastForward = forward;
-            upward.y = JumpHeight;
-            isJumping = false;
-        }*/
        
         return upward;
     }
@@ -52,24 +52,13 @@ public class CharacterMovement : MonoBehaviour {
         Vector3 forward = Input.GetAxis("LeftVertical") * for1 * MoveSpeed;
         Vector3 right = Input.GetAxis("LeftHorizontal") * transform.TransformDirection(Vector3.right) * MoveSpeed * 0.85f;
         transform.Rotate(new Vector3(0, Input.GetAxis("RightHorizontal"), 0) * RotationSpeed * Time.deltaTime);
-		//transform.Rotate(new Vector3(Input.GetAxis("RightVertical"),0,0) * RotationSpeed * Time.deltaTime);
-        /*if (cc.isGrounded)
-        {
-            lastForward = Vector3.zero;
-        }
-        else {
-            forward = Vector3.zero;
-        }*/
+		
 
         CheckJumping();
         forward += GetUpwardVector(forward);
-        //forward += lastForward;
         cc.Move(forward * Time.deltaTime);
         cc.Move(right * Time.deltaTime);
     }
 
-    /*void Move() {
-        Vector3 forward = Input.GetAxis("LeftVerticle") * transform.TransformDirection(Vector3.forward) * MoveSpeed;
-        cc.Move(forward * Time.deltaTime);
-    }*/
+    
 }
