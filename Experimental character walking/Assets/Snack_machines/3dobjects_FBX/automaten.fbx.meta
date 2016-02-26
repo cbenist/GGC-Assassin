@@ -3,8 +3,21 @@ guid: f60d719e03de4db479030669f6e80b36
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: getraenke_automat
+    100006: snack_automat
+    400000: //RootNode
+    400002: Camera
+    400004: getraenke_automat
+    400006: snack_automat
+    2300000: getraenke_automat
+    2300002: snack_automat
+    3300000: getraenke_automat
+    3300002: snack_automat
     4300000: snack_automat
     4300002: getraenke_automat
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 2
