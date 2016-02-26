@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\CharacterMovement\CharacterMovement.cs" />
      <Compile Include="Assets\CharacterMovement\VerticalCameraController.cs" />
+     <Compile Include="Assets\CharacterMovement\WeaponController.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
