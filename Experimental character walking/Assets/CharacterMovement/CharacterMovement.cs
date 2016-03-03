@@ -10,8 +10,8 @@ public class CharacterMovement : MonoBehaviour {
     bool isJumping = false;
     Vector3 upward = Vector3.zero;
     Vector3 lastForward = Vector3.zero;
-     
-
+    
+	
     public float power = 30.0f;
     public GameObject weaponPrefab;
     public GameObject spawnPoint;
@@ -25,9 +25,10 @@ public class CharacterMovement : MonoBehaviour {
 	void Update () {
         Move();
 
-        if (Input.GetButtonDown("Fire1") || Input.GetAxis("Fire1") > 0.8) {
+		if (Input.GetButtonDown("Fire1")) {
             weaponThrow(power);
         }
+
 
 	}
 

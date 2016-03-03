@@ -3,6 +3,8 @@ using System.Collections;
 
 public class WeaponController : MonoBehaviour {
 
+
+	public GameObject exploPrefab;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,6 +16,7 @@ public class WeaponController : MonoBehaviour {
 	}
 
     void OnCollisionEnter(Collision collision) {
+		Instantiate (exploPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
         //getGameObjectsbytag destroy if npc tag
     }
