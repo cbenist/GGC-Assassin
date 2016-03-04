@@ -25,6 +25,8 @@ public class CharacterMovement : MonoBehaviour {
         cc = GetComponent<CharacterController>();
 		isAlive = true;
 		gameOver = GameObject.Find ("GameOver").GetComponent<Text> ();
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,11 @@ public class CharacterMovement : MonoBehaviour {
 		if (!isAlive) {
 			// roll Credits
 			gameOver.text = "Game Over";
-			Application.LoadLevel ("Credits");
+		}
+
+		if (Input.GetKeyDown ("escape")) {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = true;
 		}
 
 	}

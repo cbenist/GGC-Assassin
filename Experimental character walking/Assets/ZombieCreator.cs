@@ -21,6 +21,6 @@ public class ZombieCreator : MonoBehaviour {
 		for (int i = 0; i < wave; i++) {
 			Instantiate (zombie, spawnPoints [Random.Range (0, spawnPoints.Length)].transform.position, transform.rotation);
 		}
-		Invoke("spawnZombies", Random.Range(10, 20));
+		Invoke("spawnZombies", Random.Range(7, 20));
 	}
 }
