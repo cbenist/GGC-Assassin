@@ -6,12 +6,12 @@ public class ZombieCreator : MonoBehaviour {
 	public GameObject zombie;
 	GameObject[] spawnPoints;
 
-	int wave;
+	public int wave;
 
 	// Use this for initialization
 	void Start () {
 		spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
-		wave = 1;
+		wave = 0;
 		spawnZombies ();
 	}
 	

@@ -49,10 +49,12 @@
      <Compile Include="Assets\CharacterMovement\ExplosionController.cs" />
      <Compile Include="Assets\CharacterMovement\VerticalCameraController.cs" />
      <Compile Include="Assets\CharacterMovement\WeaponController.cs" />
+     <Compile Include="Assets\Credits.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
+     <Compile Include="Assets\ScoreboardController.cs" />
      <Compile Include="Assets\Zombie\ZombieController.cs" />
      <Compile Include="Assets\ZombieCreator.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
