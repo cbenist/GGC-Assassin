@@ -12,6 +12,7 @@ public class ScoreboardController : MonoBehaviour {
 
 	ZombieCreator z;
 	int multiplier = 3;
+	CharacterMovement cm;
 
 	int score;
 
@@ -24,12 +25,21 @@ public class ScoreboardController : MonoBehaviour {
 		score += (multiplier * z.wave);
 		waveLabel.text = waveTag + z.wave;
 		scoreLabel.text = scoreTag + score;
-
+		cm = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement> ();
+		Invoke ("givePoints", 1);
 	}
 	// Update is called once per frame
 	void Update () {
+		
+	}
+
+	void givePoints(){
+		if(cm.isAlive){
 		score += (multiplier * z.wave);
 		waveLabel.text = waveTag + z.wave;
 		scoreLabel.text = scoreTag + score;
+
+			Invoke ("givePoints", 1);
+		}
 	}
 }
