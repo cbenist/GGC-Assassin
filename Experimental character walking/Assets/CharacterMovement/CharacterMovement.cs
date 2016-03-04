@@ -1,24 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour {
 
     CharacterController cc;
     float MoveSpeed = 5.0f;
-    float RotationSpeed = 30.0f;
+    float RotationSpeed = 60.0f;
     float JumpHeight = 10.0f;
     bool isJumping = false;
     Vector3 upward = Vector3.zero;
     Vector3 lastForward = Vector3.zero;
     
-	
+	public bool isAlive;
     public float power = 30.0f;
     public GameObject weaponPrefab;
     public GameObject spawnPoint;
+
+	Text gameOver;
+
 	// Use this for initialization
 	void Start() {
         cc = GetComponent<CharacterController>();
-
+		isAlive = true;
+		gameOver = GameObject.Find ("GameOver").GetComponent<Text> ();
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -29,6 +37,15 @@ public class CharacterMovement : MonoBehaviour {
             weaponThrow(power);
         }
 
+		if (!isAlive) {
+			// roll Credits
+			gameOver.text = "Game Over";
+		}
+
+		if (Input.GetKeyDown ("escape")) {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = true;
+		}
 
 	}
 
