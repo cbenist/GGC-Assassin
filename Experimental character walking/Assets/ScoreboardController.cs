@@ -7,7 +7,7 @@ public class ScoreboardController : MonoBehaviour {
 	GameObject Scoreboard;
 	// Use this for initialization
 	void Start () {
-		 = GameObject.Find("Scoreboard");
+		 GameObject.Find("Scoreboard");
 
 	}
 	// Update is called once per frame
