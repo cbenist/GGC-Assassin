@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour {
 
@@ -15,10 +17,14 @@ public class CharacterMovement : MonoBehaviour {
     public float power = 30.0f;
     public GameObject weaponPrefab;
     public GameObject spawnPoint;
+
+	Text gameOver;
+
 	// Use this for initialization
 	void Start() {
         cc = GetComponent<CharacterController>();
 		isAlive = true;
+		gameOver = GameObject.Find ("GameOver").GetComponent<Text> ();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +37,8 @@ public class CharacterMovement : MonoBehaviour {
 
 		if (!isAlive) {
 			// roll Credits
+			gameOver.text = "Game Over";
+			Application.LoadLevel ("Credits");
 		}
 
 	}

@@ -17,10 +17,10 @@ public class ZombieCreator : MonoBehaviour {
 	
 	void spawnZombies()
 	{
+		wave++;
 		for (int i = 0; i < wave; i++) {
 			Instantiate (zombie, spawnPoints [Random.Range (0, spawnPoints.Length)].transform.position, transform.rotation);
 		}
-		wave++;
 		Invoke("spawnZombies", Random.Range(10, 20));
 	}
 }
